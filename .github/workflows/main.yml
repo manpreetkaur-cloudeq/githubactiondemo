@@ -1,0 +1,16 @@
+name: github demo 
+
+on: 
+  push:
+    branches: ["main"]
+  workflow_dispatch:
+  
+jobs:
+  jobs-build:
+    runs-on: ubantu-latest
+    
+    steps:
+      - uses: actions/checkout@v3
+      
+      - name: print command
+        run:  echo Hello i am running with github
